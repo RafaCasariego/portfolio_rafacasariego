@@ -1,25 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafa Casariego</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scroll Pantalla a Pantalla con Efecto de Texto</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Wrapper que limita el área visible -->
+  <div id="scrollWrapper" class="scroll-wrapper">
+    <!-- Contenedor interno con todas las pantallas -->
+    <div class="scroll-container">
+      
+      <!-- Pantalla 1 -->
+      <div class="slide finisher-header-1" id="slide1" style="width: 100%; height: 100%;">
+        <h1 class="animated-text">Proyecto 1</h1>
+        <p class="animated-text">ABOUT</p>
+      </div>
 
-  <header>
-    <h1>Mi Portfolio</h1>
-  </header>
+      <!-- Pantalla 2 -->
+      <div class="slide finisher-header-2" id="slide2" style="width: 100%; height: 100%;">
+        <h1 class="animated-text">Proyecto 2</h1>
+        <p class="animated-text">about</p>
+      </div>
 
-  <main>
-    
-  </main>
+      <!-- Pantalla 3 -->
+      <div class="slide finisher-header-3" id="slide3" style="width: 100%; height: 100%;">
+        <h1 class="animated-text">Proyecto 3</h1>
+        <p class="animated-text">/contacto</p>
+      </div>
 
-  <footer>
-    
-  </footer>
+    </div>
+  </div>
 
-  <script src="js/script.js"></script>
+  <!-- Enlaza el archivo JS -->
+  <script src="js/finisher-header1.es5.min.js" type="text/javascript"></script>
+  <script src="js/finisher-header2.es5.min.js" type="text/javascript"></script>
+  <script src="js/finisher-header3.es5.min.js" type="text/javascript"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
