@@ -1,6 +1,8 @@
+/* =========================
+   1. Layout General
+   ========================= */
 
-
-/* 2. Wrapper: limita el área visible al viewport */
+/* Wrapper: limita el área visible al viewport */
 .scroll-wrapper {
   position: relative;
   width: 100vw;
@@ -8,15 +10,14 @@
   overflow: hidden; /* Controlado por JS para el scroll pantalla a pantalla */
 }
 
-/* 3. Contenedor interno: contiene todas las pantallas (3 x 100vw) */
+/* Contenedor interno: contiene todas las slides (3 x 100vw) */
 .scroll-container {
   display: flex;
   width: 300vw; /* Ajusta según la cantidad de slides */
   height: 100vh;
-  background: #f2f2f2; /* Fondo de prueba, cámbialo si lo deseas */
 }
 
-/* 4. Cada pantalla (slide): ocupa el 100% del viewport */
+/* Cada slide: ocupa el 100% del viewport y centra su contenido */
 .slide {
   flex: 0 0 100vw;
   height: 100vh;
@@ -24,12 +25,189 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* Si deseas, puedes definir un fondo propio para cada slide aquí */
 }
 
-
-.finisher-header-1, .finisher-header-2, .finisher-header-3 {
+/* Ajuste de posición para los efectos de Finisher */
+.finisher-header-1,
+.finisher-header-2,
+.finisher-header-3 {
   position: relative;
   z-index: 0; /* Contenido por encima de su canvas */
 }
 
+/* ===========================================
+   2. Tarjetas de Proyecto (Flip + Tilt)
+   =========================================== */
+
+/* Contenedor de la tarjeta (para el efecto flip) */
+.project-card {
+  width: 64%;      /* Ajusta el ancho según tu diseño */
+  height: 70%;     /* Ajusta el alto según tu diseño */
+  margin: 0 auto;  /* Centra la tarjeta */
+  position: relative;
+  perspective: 1000px; /* Crea el efecto 3D */
+  cursor: pointer;     /* Indica que es clicable */
+}
+
+/* Contenedor interno que se voltea */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+/* Caras de la tarjeta: frontal y trasera */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;  /* Oculta la cara que está dando la espalda */
+  transition: transform 0.7s ease;
+}
+
+/* Estado inicial de la cara frontal: sin giro */
+.card-front {
+  transform: rotateY(0deg);
+  z-index: 2; /* Asegura que esté por encima */
+}
+
+/* Estado inicial de la cara trasera: girada 180° */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Contenedor para el efecto tilt (dentro de la cara frontal) */
+.tilt-wrapper {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+  border-radius: 10px;
+}
+
+.tilt-wrapper:hover {
+  box-shadow: 0 12px 25px rgba(119, 119, 119, 0.912), 0 0 20px rgba(72, 72, 72, 0.1);
+}
+
+
+/* Estilo básico para imágenes (se pueden ajustar según convenga) */
+.card-front img,
+.card-back img {
+  max-width: 70vw; 
+  max-height: 70vh; 
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Al añadir la clase "flipped" a .project-card, se voltea el contenedor interno */
+.project-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* ===============================
+   3. Botones
+   =============================== */
+
+/* Contenedor de botones: ocupa toda la slide en posición absoluta */
+.nav-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Ojo: si tu .slide ya es position: relative, 
+     .nav-buttons se referirá a la slide. 
+     Si no, haz .slide { position: relative; } */
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Truco para que no afecte otros elementos */
+}
+
+/* Cada botón tendrá pointer-events reactivados, 
+   y se ubica de forma absoluta dentro de .nav-buttons */
+.nav-buttons a,
+.nav-buttons button {
+  pointer-events: auto;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-buttons a:hover,
+.nav-buttons button:hover {
+  background-color: transpar;
+}
+
+/* 1. Botón Home (arriba izquierda) */
+.btn-home {
+  position: absolute;
+  top: 6.5%;
+  left: 18.5%;
+}
+
+
+/* 2, 3. Botones PREV y NEXT */
+/* Envuelve cada botón PREV y NEXT con su línea vertical */
+.prev-wrapper,
+.next-wrapper {
+  position: absolute;  /* Para colocarlos a izquierda/derecha */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: auto; /* Para que se pueda hacer clic */
+}
+
+/* PREV a la izquierda */
+.prev-wrapper {
+  left: 1%; /* Ajusta si quieres más o menos margen */
+}
+
+/* NEXT a la derecha */
+.next-wrapper {
+  right: 1%; /* Ajusta si quieres más o menos margen */
+}
+
+/* Línea vertical */
+.vertical-line {
+  width: 1px;
+  height: 65vh; /* Ajusta la altura que quieras */
+  background-color: #b6becfd6; /* Color de la línea */
+  margin: 20px;         /* Separación respecto al botón */
+}
+
+/* Ajusta los botones para que no sean absolute,
+   y quítales la posición si la tenían */
+.btn-prev,
+.btn-next {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-prev {
+  transform: rotate(-90deg);
+}
+
+.btn-next {
+  transform: rotate(90deg);
+}
+
+
+/* 4. Botones EXPERIENCIA, ABOUT y CONTACTO */
+.bottom-nav {
+  width: 65%;
+  position: absolute;
+  bottom: 6%;   /* Ajusta este valor según lo necesites */
+  left: 18.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
