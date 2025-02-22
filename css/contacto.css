@@ -1,0 +1,117 @@
+
+/************************** 
+CSS PÁGINA DE CONTACTO
+***************************/
+
+
+/**************************
+CSS PÁGINA DE CONTACTO
+***************************/
+
+/* Asegúrate de que style.css ya contiene reset/márgenes básicos */
+body {
+    background-color: #D3D2CD;
+    color: #1E1E20;
+    font-family: "Readex Pro", sans-serif;
+  }
+  
+  /* Encabezado */
+  .header {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .btn-home {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    text-decoration: none;
+    color: #1E1E20;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Contenedor principal */
+  .contact-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 60px); /* resto del espacio, descontando header */
+    text-align: center;
+  }
+  
+  /* Texto superior */
+  .contact-intro {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 6%;
+  }
+  
+/* Email grande */
+.contact-email {
+    font-size: 6.5vw;
+    margin: 0 0 5% 0;
+    font-weight: 700;
+    text-decoration-line: underline;       
+    text-decoration-color: transparent;    
+    text-decoration-thickness: 3.5%;       
+    text-underline-offset: 3%;            
+    transition: 0.25s ease;
+    cursor: pointer;
+  }
+
+  .contact-email:hover {
+    text-decoration-color: #101011;
+    scale: 1.03; 
+    color: #141415;
+  }
+  
+  
+  /* Contenedor para “Disponible para trabajar | Disponible como freelance” */
+  .availability-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4%;
+    gap: 25px; 
+  }
+  
+  /* Texto de disponibilidad */
+  .availability-item {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  /* Línea vertical */
+  .vertical-line {
+    width: 1px;
+    height: 30px; 
+    background-color: #1E1E20;
+  }
+  
+  /* Botonera inferior */
+  .contact-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    margin: 0 0 6% 0;
+  }
+  
+  .btn-contact {
+    background-color: #1E1E20;
+    color: #D3D2CD;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: 0.2s ease;
+  }
+  
+  .btn-contact:hover {
+    background-color: #000000;
+  }
+  

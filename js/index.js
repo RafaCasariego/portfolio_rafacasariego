@@ -1,3 +1,8 @@
+
+/* 
+SCRIPTS DE LA PÁGINA DE INICIO (INDEX)
+*/
+
 const scrollWrapper = document.getElementById('scrollWrapper');
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
@@ -180,7 +185,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     const percentY = (y - centerY) / centerY; // va de -1 a 1
     
     // Define el desplazamiento máximo (en píxeles)
-    const maxTranslate = 4;
+    const maxTranslate = 8;
     
     // Calcula el desplazamiento en X e Y
     const translateX = percentX * maxTranslate;

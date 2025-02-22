@@ -176,7 +176,7 @@
 /* Línea vertical */
 .vertical-line {
   width: 1px;
-  height: 65vh; /* Ajusta la altura que quieras */
+  height: 100vh; /* Ajusta la altura que quieras */
   background-color: #b6becfd6; /* Color de la línea */
   margin: 20px;         /* Separación respecto al botón */
 }
