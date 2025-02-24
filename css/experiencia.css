@@ -1,7 +1,117 @@
 
 
 body {
-    background-color: #000;
-    color: #ffffff;
-    font-family: "Readex Pro", sans-serif; 
-  }
+  background-color: #000;
+  color: #ffffff;
+  font-family: "Readex Pro", sans-serif; 
+}
+
+/***************************** 
+ESTILOS PARA EXPERIENCIA
+*****************************/
+
+/* Ajustes generales de layout */
+body {
+margin: 0;
+padding: 0;
+background-color: #000;
+color: #ffffff;
+overflow: hidden;
+font-family: "Readex Pro", sans-serif; /* O la tipografía que uses */
+}
+
+/* Sección IZQUIERDA (fija) */
+.left-section {
+position: fixed;   /* Mantener fija en la pantalla */
+top: 0;
+left: 0;
+width: 50vw;       /* Ocupa la mitad del viewport */
+height: 100vh;     /* Toda la altura */
+background-color: #111;  /* Fondo oscuro minimalista */
+color: #fff;
+padding: 2rem;     /* Espaciado interno */
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+justify-content: center; /* Centrar verticalmente */
+}
+
+/* Nombre y puesto */
+.nombre {
+margin: 0 0 0.5rem;
+font-size: 2rem; 
+}
+.puesto {
+margin: 0 0 2rem;
+font-weight: 400;
+font-size: 1.2rem;
+opacity: 0.8;
+}
+
+/* Lista de empresas o nav interno */
+.empresas ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.empresas li {
+margin-bottom: 1rem;
+}
+.empresas a {
+color: #fff;
+text-decoration: none;
+font-size: 1.1rem;
+}
+.empresas a:hover {
+text-decoration: underline;
+}
+
+/* Botón / enlace de “contacta conmigo” */
+.contact-btn {
+margin-top: 2rem;
+display: inline-block;
+color: #fff;
+text-decoration: none;
+font-weight: 700;
+border: 1px solid #fff;
+padding: 0.5rem 1rem;
+transition: 0.3s;
+width: fit-content;
+}
+.contact-btn:hover {
+background-color: #fff;
+color: #000;
+}
+
+/* Sección DERECHA (scroll) */
+.right-section {
+position: relative;
+margin-left: 50vw;  /* Ocupa la mitad derecha */
+width: 50vw;
+height: 100vh;
+overflow-y: auto;   /* Scroll vertical */
+background-color: #222; 
+color: #eee;
+padding: 2rem;
+box-sizing: border-box;
+}
+
+/* Bloque de cada empresa */
+.bloque-empresa {
+border-bottom: 1px solid #333;
+padding-bottom: 3rem;
+margin-bottom: 3rem;
+}
+.bloque-empresa:last-of-type {
+border-bottom: none;
+margin-bottom: 0;
+padding-bottom: 0;
+}
+.bloque-empresa h3 {
+margin-top: 0;
+font-size: 1.8rem;
+}
+.bloque-empresa p {
+font-size: 1rem;
+line-height: 1.5;
+}

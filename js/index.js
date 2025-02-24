@@ -60,12 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
     "colors": {
-      "background": "#5d5b57",
+      "background": "#050f20",
       "particles": [
-        "#2d56ab",
-        "#495168",
-        "#2a2344",
-        "#1a76e4"
+        "#13346d",
+        "#050f20",
+        "#202a5a",
+        "#031129"
       ]
     },
     "blending": "lighten",
@@ -139,9 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
       "background": "#000000",
       "particles": [
         "#3d9f2d",
-        "#56704b",
-        "#5d9e7e",
-        "#78b3a4"
+        "#082709",
+        "#082709",
+        "#083e0b"
       ]
     },
     "blending": "lighten",

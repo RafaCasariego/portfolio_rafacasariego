@@ -1,69 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto - Rafa Casariego</title>
-  <!-- CSS global y específico de contacto -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experiencia – Rafa Casariego</title>
+
+  <!-- Fuentes y estilos globales -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Estilos exclusivos para la página de experiencia -->
   <link rel="stylesheet" href="css/experiencia.css">
-  
-  <!-- Fuentes (Readex Pro según tu portfolio) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" 
-    rel="stylesheet"
-  >
 </head>
 <body>
+  
+  <!-- Sección izquierda (fija) -->
+  <div class="left-section">
+    <h1 class="nombre">RAFA CASARIEGO</h1>
+    <h2 class="puesto">Frontend Dev · Minimal Rebel</h2>
+    
+    <!-- Lista de empresas a modo de “índice” o navegación interna -->
+    <nav class="empresas">
+      <ul>
+        <li><a href="#empresa1">Empresa 1</a></li>
+        <li><a href="#empresa2">Empresa 2</a></li>
+        <li><a href="#empresa3">Empresa 3</a></li>
+      </ul>
+    </nav>
 
-    <header class="header">
-        <a href="index.html" class="btn-home">@RAFACASARIEGO</a>
-    </header>
+    <!-- Botón o enlace para contactar -->
+    <a class="contact-btn" href="contacto.html">CONTACTA CONMIGO</a>
+  </div>
 
-    <main class="experiencia">
+  <!-- Sección derecha (scroll) -->
+  <div class="right-section">
+    <!-- Bloque de cada empresa. Puedes repetir tantas secciones como necesites -->
+    <section id="empresa1" class="bloque-empresa">
+      <h3>Empresa 1</h3>
+      <p>
+        Descripción, puesto, responsabilidades, logros...<br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.
+      </p>
+    </section>
+    
+    <section id="empresa2" class="bloque-empresa">
+      <h3>Empresa 2</h3>
+      <p>
+        Descripción, puesto, responsabilidades, logros...<br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.
+      </p>
+    </section>
+    
+    <section id="empresa3" class="bloque-empresa">
+      <h3>Empresa 3</h3>
+      <p>
+        Descripción, puesto, responsabilidades, logros...<br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.
+      </p>
+    </section>
 
-        <h1>EXPERIENCIA LABORAL</h1>
-
-        <article class="experiencia-item"> <!-- EXPERIENCIA BLOQUE 1 -->
-            <div class="exp-header">
-                <h2>L3TCRAFT</h2>
-                <span class="rol">GESTIÓN BD</span> <br>
-                <time class="fechas">2020 - 2024</time>
-            </div>
-
-            <p class="descripcion">
-                Lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma
-            </p>
-        </article>
-
-        <article class="experiencia-item"> <!-- EXPERIENCIA BLOQUE 2 -->
-            <div class="exp-header">
-                <h2>FREELANCE</h2>
-                <span class="rol">CREAR WEBS - EMPRENDIMIENTO GAMING</span> <br>
-                <time class="fechas">2020 - 2024</time>
-            </div>
-
-            <p class="descripcion">
-                Lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma
-            </p>
-        </article>
-
-        <article class="experiencia-item"> <!-- EXPERIENCIA BLOQUE 3 -->
-            <div class="exp-header">
-                <h2>OTROS</h2>
-                <span class="rol">PROYECTOS, DESARROLLOS, COSAS QUE HE PROGRAMADO EN CURSOS, TRABAJOS COMO EDITORIAL CASARIEGO...</span> <br>
-                <time class="fechas">2020 - 2024</time>
-            </div>
-
-            <p class="descripcion">
-                Lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma lorem ipsum dolor cuantum queries et ipsma
-            </p>
-        </article>
-    </main>
-
-    <a href="http://127.0.0.1:3000/contacto.html">CONTACTA CONMIGO</a>
+    <!-- Agrega más secciones si lo deseas -->
+  </div>
 
 </body>
 </html>
