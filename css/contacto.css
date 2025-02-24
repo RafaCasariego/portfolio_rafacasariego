@@ -112,6 +112,36 @@ body {
   }
   
   .btn-contact:hover {
-    background-color: #000000;
+    scale: 1.1;
   }
   
+  .btn-icons{
+    margin: 0px 0px 0px 8px
+  }
+
+  /***********************
+  Notificación flotante
+ ***********************/
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #1E1E20; 
+  color: #D3D2CD;
+  padding: 10px 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+  /* Transición para la animación de aparecer/desaparecer */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Oculto por defecto */
+.hidden {
+  opacity: 0;
+  pointer-events: none; 
+  transform: translateY(20px);
+}
+

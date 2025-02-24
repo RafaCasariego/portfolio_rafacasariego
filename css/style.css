@@ -4,14 +4,10 @@ CSS GLOBAL
 ***************************/
 
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* Oculta cualquier scroll del body */
     font-family: "Readex Pro", serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     color: whitesmoke;
   }
+  

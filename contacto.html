@@ -7,14 +7,19 @@
   <!-- CSS global y específico de contacto -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/contacto.css">
-  
-  <!-- Fuentes (Readex Pro según tu portfolio) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
     href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" 
     rel="stylesheet"
   >
+  <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer"
+/>
 </head>
 <body>
   
@@ -29,6 +34,9 @@
     <p class="contact-intro">CONTACTA CONMIGO</p>
     <!-- Email grande en el centro -->
     <h1 class="contact-email">rafacasariego@gmail.com</h1>
+    <!-- Globo de notificación -->
+    <div id="notification" class="notification hidden">¡Email copiado!</div>
+
     
     <!-- Sección con la línea vertical y los dos estados: “Disponible” -->
     <div class="availability-container">
@@ -39,13 +47,43 @@
     
     <!-- Botonera inferior -->
     <div class="contact-buttons">
-      <a href="https://github.com/TuUsuario" target="_blank" class="btn-contact">GitHub</a>
-      <a href="https://www.linkedin.com/in/TuUsuario" target="_blank" class="btn-contact">LinkedIn</a>
-      <a href="mailto:rafacasariego@gmail.com" class="btn-contact">Email</a>
-      <a href="ruta/a/tuCV.pdf" download class="btn-contact">Descargar CV</a>
+      <a href="https://github.com/RafaCasariego" target="_blank" class="btn-contact">
+        GitHub <i class="btn-icons fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/rafael-casariego/" target="_blank" class="btn-contact">
+        LinkedIn <i class="btn-icons fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:rafacasariego@gmail.com" class="btn-contact">
+        Email <i class="btn-icons fas fa-envelope"></i>
+      </a>
+      <a href="assets\archivos\Rafael-Casariego-CV.pdf" target="_blank" class="btn-contact">
+        CV <i class="btn-icons fas fa-file-pdf"></i>
+      </a>
     </div>
-    
   </main>
+
+  <!-- Script para copiar email y mostrar la notificación -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const emailElement = document.querySelector('.contact-email');
+      const notification = document.getElementById('notification');
+      
+      emailElement.addEventListener('click', () => {
+        navigator.clipboard.writeText(emailElement.textContent)
+          .then(() => {
+            // Mostramos el globo
+            notification.classList.remove('hidden');
+            // Ocultarlo tras 3 segundos
+            setTimeout(() => {
+              notification.classList.add('hidden');
+            }, 3000);
+          })
+          .catch(err => {
+            console.error('Error al copiar: ', err);
+          });
+      });
+    });
+  </script>
   
 </body>
 </html>
