@@ -6,8 +6,8 @@ html, body {
   /* Cursor principal */
   #cursor {
     position: fixed;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     background-color: black;
     border-radius: 50%;
     pointer-events: none;
@@ -18,14 +18,13 @@ html, body {
   /* Estela del cursor */
   .trail {
     position: fixed;
-    width: 6px;
-    height: 6px;
-    background-color: rgba(0, 0, 0, 0.5);
+    width: 14px;
+    height: 14px;
+    background-color: black;
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
-    transition: transform 0.15s ease-out, opacity 0.3s ease-out;
-    opacity: 0.8;
+    transition: transform 0.1s ease-out;
   }
   
