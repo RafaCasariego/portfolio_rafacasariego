@@ -6,59 +6,232 @@
   <title>Experiencia – Rafa Casariego</title>
 
   <!-- Fuentes y estilos globales -->
+  <link rel="stylesheet" href="css/cursor.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Estilos exclusivos para la página de experiencia -->
   <link rel="stylesheet" href="css/experiencia.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" 
+    rel="stylesheet"
+  >
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  />
+
 </head>
 <body>
-  
+  <a href="index.html" class="arrow-button" aria-label="Volver al inicio">
+    <i class="fa-solid fa-circle-arrow-left"></i>
+  </a>
+
   <!-- Sección izquierda (fija) -->
   <div class="left-section">
-    <h1 class="nombre">RAFA CASARIEGO</h1>
-    <h2 class="puesto">Frontend Dev · Minimal Rebel</h2>
-    
-    <!-- Lista de empresas a modo de “índice” o navegación interna -->
-    <nav class="empresas">
-      <ul>
-        <li><a href="#empresa1">Empresa 1</a></li>
-        <li><a href="#empresa2">Empresa 2</a></li>
-        <li><a href="#empresa3">Empresa 3</a></li>
-      </ul>
-    </nav>
-
-    <!-- Botón o enlace para contactar -->
-    <a class="contact-btn" href="contacto.html">CONTACTA CONMIGO</a>
+    <div class="left-content">
+      <h1 class="nombre">Rafa Casariego</h1>
+      <h2 class="puesto">Junior Full-Stack</h2>
+      <nav class="empresas">
+        <ul>
+          <li><a href="#empresa1"><span class="line"></span><span class="empresa-name">PROYECTOS PERSONALES</span></a></li>
+          <li><a href="#empresa2"><span class="line"></span><span class="empresa-name">L3TCRAFT</span></a></li>
+          <li><a href="#empresa3"><span class="line"></span><span class="empresa-name">VORTEX</span></a></li>
+          <li><a href="#empresa4"><span class="line"></span><span class="empresa-name">FREELANCE</span></a></li>
+        </ul>
+      </nav>
+      <a class="contact-btn" href="contacto.html">CONTACTA CONMIGO</a>
+    </div>
   </div>
+  
 
-  <!-- Sección derecha (scroll) -->
+  <!-- Sección derecha: contenedor con la lista de experiencias -->
   <div class="right-section">
-    <!-- Bloque de cada empresa. Puedes repetir tantas secciones como necesites -->
-    <section id="empresa1" class="bloque-empresa">
-      <h3>Empresa 1</h3>
-      <p>
-        Descripción, puesto, responsabilidades, logros...<br/>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.
-      </p>
-    </section>
-    
-    <section id="empresa2" class="bloque-empresa">
-      <h3>Empresa 2</h3>
-      <p>
-        Descripción, puesto, responsabilidades, logros...<br/>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.
-      </p>
-    </section>
-    
-    <section id="empresa3" class="bloque-empresa">
-      <h3>Empresa 3</h3>
-      <p>
-        Descripción, puesto, responsabilidades, logros...<br/>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.
-      </p>
-    </section>
+    <div class="experiences-container">
 
-    <!-- Agrega más secciones si lo deseas -->
+      <!-- Experiencia 1 -->
+      <section id="empresa1" class="experience-item">
+        <div class="experience-dates">
+          2024 — Present
+        </div>
+        <div class="experience-details">
+          <h3>
+            PROYECTOS PERSONALES
+          </h3>
+          
+          <p class="role">
+            <strong>Desarrollador Full-Stack</strong> 
+          </p>
+
+          <p class="description">
+            Descripción, puesto, responsabilidades, logros... <br/>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.
+          </p>
+
+          <!-- Etiquetas de tecnología -->
+          <div class="tech-tags">
+            <span>Python</span>
+            <span>JS</span>
+            <span>MySQL</span>
+            <span>FastAPI</span>
+            <span>AWS S3</span>
+            <span>Playwright</span>
+            <span>GitHub</span>
+            <span>Figma</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiencia 2 -->
+      <section id="empresa2" class="experience-item">
+        <div class="experience-dates">
+          2020 — 2024
+        </div>
+        <div class="experience-details">
+          <h3>
+            <img 
+            src="assets/images/l3t_logo.PNG" 
+            alt="Logo de L3TCRAFT" 
+            class="empresa-logo" 
+            />
+            <span> · Marketing de Influencers</span>
+          </h3>
+          
+          <p class="role">
+            <strong>Desarrollador Full-Stack</strong> 
+          </p>
+
+          <p class="description">
+            Descripción, puesto, responsabilidades, logros... <br/>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.
+          </p>
+
+          <!-- Etiquetas de tecnología -->
+          <div class="tech-tags">
+            <span>Excel · Google Sheets</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiencia 3 -->
+      <section id="empresa3" class="experience-item">
+        <div class="experience-dates">
+          2021 — 2023
+        </div>
+        <div class="experience-details">
+
+          <h3>
+            <img 
+            src="assets/images/vortex-logo.png"
+            alt="Logo Vortex" 
+            class="empresa-logo" 
+            />
+            <span>· E-commerce de equipos gaming</span>
+          </h3>
+          
+          <p class="role">
+            <strong>Desarrollador Full-Stack</strong> 
+          </p>
+
+          <p class="description">
+            Descripción, puesto, responsabilidades, logros...
+            <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.
+          </p>
+
+          <div class="tech-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Wordpress</span>
+            <span>Shopify</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiencia 4 -->
+      <section id="empresa4" class="experience-item">
+        <div class="experience-dates">
+          2019 — 2021
+        </div>
+        <div class="experience-details">
+          <!-- Si no hay logo, puedes omitir <img> -->
+          <h3>
+            FREELANCE
+            <span>· Proyectos Web</span>
+          </h3>
+          
+          <p class="role">
+            <strong>Desarrollador Full-Stack</strong> 
+          </p>
+
+          <p class="description">
+            Descripción, puesto, responsabilidades, logros...
+            <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, etc.
+          </p>
+
+          <div class="tech-tags">
+            <span>JavaScript</span>
+            <span>WordPress</span>
+            <span>Figma</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
   </div>
 
+  <div id="cursor" class="cursor"></div>
+  
+  <!-- IntersectionObserver para la lista de empresas -->
+  <script src="js/cursor.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.experience-item');
+  const menuLinks = document.querySelectorAll('nav.empresas a');
+
+  function highlightNearestSection() {
+    // Calcula la posición vertical del centro del viewport
+    const viewportCenter = window.scrollY + (window.innerHeight / 2);
+
+    let closestSection = null;
+    let minDistance = Infinity;
+
+    sections.forEach(section => {
+      // Calculamos el centro vertical de la sección
+      const sectionCenter = section.offsetTop + (section.offsetHeight / 2);
+      // Distancia absoluta al centro del viewport
+      const distance = Math.abs(viewportCenter - sectionCenter);
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestSection = section;
+      }
+    });
+
+    // Quitamos la clase .active a todos los enlaces
+    menuLinks.forEach(link => link.classList.remove('active'));
+
+    // Ponemos .active solo al enlace que apunta a la sección más cercana
+    if (closestSection) {
+      const activeLink = document.querySelector(
+        `nav.empresas a[href="#${closestSection.id}"]`
+      );
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+  }
+
+  // Cada vez que se haga scroll o resize, recalculamos
+  window.addEventListener('scroll', highlightNearestSection);
+  window.addEventListener('resize', highlightNearestSection);
+
+  // También puedes llamar una vez al cargar la página
+  highlightNearestSection();
+});
+  </script>
 </body>
 </html>
